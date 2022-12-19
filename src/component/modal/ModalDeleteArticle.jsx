@@ -1,4 +1,5 @@
 import "../../styles/modal.css";
+import { deleteArticle } from "../../hooks/Article";
 
 const ModalDeleteArticle = (props) => {
   return (
