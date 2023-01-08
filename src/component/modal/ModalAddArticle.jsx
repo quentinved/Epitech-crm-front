@@ -5,11 +5,13 @@ import { useState } from "react";
 const ModalAddArticle = (props) => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const [tag, setTag] = useState("");
 
-  const createArticle = (title, content, set) => {
+  const createArticle = (title, content, tag, set) => {
     Fetcher.post("article", {
       title: title,
       content: content,
+      tag: tag,
     })
       .then((data) => console.log(data))
       .catch((err) => console.log(err));
@@ -23,14 +25,14 @@ const ModalAddArticle = (props) => {
         <div className="container">
           <h2>Add an article</h2>
           <label>Title</label>
-          <input onChange={(event) => setTitle(event.target.value)}></input>
+          <input onChange={(event) => setTitle(event.target.value)}/>
           <label>Content</label>
-          <input onChange={(event) => setContent(event.target.value)}></input>
-          {/* <label>Image</label>
-            <input></input> */}
+          <input onChange={(event) => setContent(event.target.value)}/>
+          <label>Tag</label>
+            <input onChange={(event) => setTag(event.target.value)}/>
           <div className="modalfooter-content">
             <button
-              onClick={(event) => createArticle(title, content, props.set)}
+              onClick={(event) => createArticle(title, content, tag, props.set)}
             >
               Create
             </button>
