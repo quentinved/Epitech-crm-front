@@ -56,7 +56,7 @@ function App() {
       <div className="App">
         <Navbar />
         <div className="leftside">
-          {auth.admin && <AdminLeftSide set={setAddArticle} res={setRes} />}
+          {auth.isConnected && <AdminLeftSide set={setAddArticle} res={setRes} />}
           {res.map((article) => {
             return (
               <div

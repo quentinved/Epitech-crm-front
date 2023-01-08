@@ -10,18 +10,12 @@
   margin-top: 85px;
 }
 
-.addArticle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30%;
-}
 .tagContainer {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: space-between;
-  width: 70%;
+  width: 100%;
 }
 
 .headerLeftside {
