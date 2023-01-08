@@ -9,8 +9,8 @@ export default {
 		APP_CLIENT_ID: '726drblr85sqsjg7u1f452ohvh',
 		DOMAIN: 'epitech-openid.auth.eu-west-3.amazoncognito.com',
 		SCOPE: ['email', 'openid'],
-		REDIRECT_SIGN_IN: 'http://localhost:5173/callback/',
-		REDIRECT_SIGN_OUT: 'http://localhost:5173/',
+		REDIRECT_SIGN_IN: 'https://d1sfectf2q28h4.cloudfront.net/callback/',
+		REDIRECT_SIGN_OUT: 'https://d1sfectf2q28h4.cloudfront.net/',
 		RESPONSE_TYPE: 'code'
 	}
 };
