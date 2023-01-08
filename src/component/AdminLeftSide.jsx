@@ -5,6 +5,7 @@ const AdminLeftSide = (props) => {
   const [tag, setTag] = useState("");
   return (
     <div className="headerLeftside">
+      <div className="addArticle">
       <button
         onClick={(event) => {
           props.set(true);
@@ -12,19 +13,21 @@ const AdminLeftSide = (props) => {
       >
         Add an article
       </button>
+      </div>
+      <div className="tagContainer">
       <input
         type="text"
         placeholder="Search by TAG"
         onChange={(event) => setTag(event.target.value)}
-      />
+        />
       <button
         onClick={() => {
-          console.log("ddebug", tag);
           fetchByTag(tag, props.res);
         }}
-      >
+        >
         Rechercher
       </button>
+        </div>
     </div>
   );
 };
