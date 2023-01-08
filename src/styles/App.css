@@ -10,8 +10,22 @@
   margin-top: 85px;
 }
 
+.addArticle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+.tagContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: space-between;
+  width: 70%;
+}
+
 .headerLeftside {
-  height: 50px;
+  min-height: 50px;
   display: flex;
   position: sticky;
   top: 80px;
@@ -19,6 +33,8 @@
   justify-content: flex-start;
   background-color: #222;
 }
+
+
 
 .leftside {
   display: flex;
@@ -106,4 +122,14 @@
 
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+@media (max-width: 968px) {
+  .headerLeftside {
+    flex-direction: column;
+  }
+
+  .tagContainer {
+    flex-direction: column;
+  }
 }

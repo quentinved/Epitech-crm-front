@@ -5,6 +5,7 @@ import { modifyArticle } from "../../hooks/Article";
 const ModalModifyArticle = (props) => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const [tag, setTag] = useState("");
 
   return (
     <div className="modal">
@@ -15,18 +16,24 @@ const ModalModifyArticle = (props) => {
           <input
             placeholder={props.article.Title}
             onChange={(event) => setTitle(event.target.value)}
-          ></input>
+          />
           <label>Content</label>
           <input
             placeholder={props.article.Content}
             onChange={(event) => setContent(event.target.value)}
-          ></input>
+          />
+          <label>Tag</label>
+          <input
+            placeholder={props.article.Tag}
+            onChange={(event) => setTag(event.target.value)}
+          />
           <div className="modalfooter-content">
             <button
               onClick={(event) => {
-                modifyArticle(props.article.id, props.setRes, {
+                modifyArticle(props.article, props.setRes, {
                   title,
                   content,
+                  tag
                 });
                 props.set(false);
               }}
