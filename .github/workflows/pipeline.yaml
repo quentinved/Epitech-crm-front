@@ -34,7 +34,7 @@ jobs:
 
     - name: Add environment variables to .env
       run: |
-        echo REACT_APP_AXIOS_URL=${{secrets.TEST}} >> .env
+        echo VITE_SOME_KEY=${{secrets.TEST}} >> .env
 
     - name: Build Static Website
       run: yarn build
