@@ -30,6 +30,8 @@ jobs:
     - name: Install Dependencies
       run: |
         node --version
+        yarn
+
     - name: Add environment variables to .env
       run: |
         echo REACT_APP_AXIOS_URL=${{secrets.TEST}} >> .env
