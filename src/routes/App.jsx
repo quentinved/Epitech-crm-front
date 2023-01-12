@@ -19,6 +19,7 @@ function App() {
   let [modifyArticle, setModifyArticle] = useState(false);
   let [idArticle, setIdarticle] = useState({});
 
+  console.log("PLS", process.env.REACT_APP_AXIOS_URL)
   const changeActive = (article) => {
     Fetcher.get(`article/${article.id}`)
       .then((data) => setDetail(data))

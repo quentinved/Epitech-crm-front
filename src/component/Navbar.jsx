@@ -20,9 +20,6 @@ const Navbar = () => {
           <button onClick={() => Auth.federatedSignIn()}>Login</button>
         )}
         {auth.isConnected && (
-          <button onClick={() => navigate("/profile")}>Profile</button>
-        )}
-        {auth.isConnected && (
           <button
             onClick={() => {
               auth.dispatch({ type: "LOGOUT" });

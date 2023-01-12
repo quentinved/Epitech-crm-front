@@ -12,7 +12,6 @@ jobs:
       DIST: dist
       REGION: eu-west-3
       DIST_ID: EVDJ52DOKKHNC
-
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -31,7 +30,9 @@ jobs:
     - name: Install Dependencies
       run: |
         node --version
-        yarn
+    - name: Add environment variables to .env
+      run: |
+        echo REACT_APP_AXIOS_URL=${{secrets.TEST}} >> .env
 
     - name: Build Static Website
       run: yarn build
