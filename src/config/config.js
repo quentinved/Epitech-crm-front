@@ -9,8 +9,8 @@ export default {
 		APP_CLIENT_ID: import.meta.env.VITE_APP_CLIENT_ID,
 		DOMAIN: 'epitech-openid.auth.eu-west-3.amazoncognito.com',
 		SCOPE: ['email', 'openid'],
-		REDIRECT_SIGN_IN: import.meta.env.VITE_REDIRECT_SIGN_IN,
-		REDIRECT_SIGN_OUT: import.meta.env.VITE_REDIRECT_SIGN_OUT,
+		REDIRECT_SIGN_IN:'http://localhost:5173/callback/',
+		REDIRECT_SIGN_OUT: 'http://localhost:5173/',
 		RESPONSE_TYPE: 'code'
 	}
 };
