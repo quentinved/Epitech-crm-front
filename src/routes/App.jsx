@@ -19,7 +19,7 @@ function App() {
   let [modifyArticle, setModifyArticle] = useState(false);
   let [idArticle, setIdarticle] = useState({});
 
-  console.log("pls", import.meta.env.VITE_SOME_KEY) // 123
+  console.log("pls", import.meta.env.VITE_USER_POOL_ID) // 123
   const changeActive = (article) => {
     Fetcher.get(`article/${article.id}`)
       .then((data) => setDetail(data))
