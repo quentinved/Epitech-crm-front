@@ -5,12 +5,12 @@ export default {
 	},
 	cognito: {
 		REGION: 'eu-west-3',
-		USER_POOL_ID: 'eu-west-3_uGAFHQkLs',
-		APP_CLIENT_ID: '726drblr85sqsjg7u1f452ohvh',
+		USER_POOL_ID: import.meta.env.VITE_USER_POOL_ID,
+		APP_CLIENT_ID: import.meta.env.VITE_APP_CLIENT_ID,
 		DOMAIN: 'epitech-openid.auth.eu-west-3.amazoncognito.com',
 		SCOPE: ['email', 'openid'],
-		REDIRECT_SIGN_IN: 'https://d1sfectf2q28h4.cloudfront.net/callback/',
-		REDIRECT_SIGN_OUT: 'https://d1sfectf2q28h4.cloudfront.net/',
+		REDIRECT_SIGN_IN: import.meta.env.VITE_REDIRECT_SIGN_IN,
+		REDIRECT_SIGN_OUT: import.meta.env.VITE_REDIRECT_SIGN_OUT,
 		RESPONSE_TYPE: 'code'
 	}
 };

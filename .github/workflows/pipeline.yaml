@@ -34,7 +34,7 @@ jobs:
 
     - name: Add environment variables to .env
       run: |
-        echo VITE_SOME_KEY=${{secrets.TEST}} >> .env
+        printf "VITE_APP_CLIENT_ID=${{secrets.VITE_APP_CLIENT_ID}}\VITE_USER_POOL_ID=${{secrets.VITE_USER_POOL_ID}}\VITE_REDIRECT_SIGN_IN=${{secrets.VITE_REDIRECT_SIGN_IN}}\VITE_REDIRECT_SIGN_OUT=${{secrets.VITE_REDIRECT_SIGN_OUT}}\n" >> .env
 
     - name: Build Static Website
       run: yarn build
@@ -43,7 +43,7 @@ jobs:
       run: |
         aws s3 sync --delete ${{ env.DIST }} s3://${{ env.BUCKET }}
 
-    - name: Copy files to the production website with the AWS CLI
+    - name: Create invalidation for CloudFront
       run: |
         aws cloudfront create-invalidation \
           --distribution-id ${{ env.DIST_ID }} \
