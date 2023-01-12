@@ -34,7 +34,7 @@ jobs:
 
     - name: Add environment variables to .env
       run: |
-        printf "VITE_APP_CLIENT_ID=${{secrets.VITE_APP_CLIENT_ID}}n\VITE_USER_POOL_ID=${{secrets.VITE_USER_POOL_ID}}" >> .env
+        printf "VITE_APP_CLIENT_ID=${{secrets.VITE_APP_CLIENT_ID}}\nVITE_USER_POOL_ID=${{secrets.VITE_USER_POOL_ID}}" >> .env
 
     - name: Build Static Website
       run: yarn build
